@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textForNumberFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textForNumberOn"
+        android:layout_above="@+id/textForNumberSecond"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/textForNumberSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textForNumberTwo"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/numberFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textForNumberSecond"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="36dp"
+        android:layout_toEndOf="@+id/textForNumberFirst"
+        android:minWidth="75sp" />
+
+    <EditText
+        android:id="@+id/numberSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="40dp"
+        android:layout_toEndOf="@+id/textForNumberSecond"
+        android:minWidth="75sp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonSum"
+        android:onClick="onClickButtonSum"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textForNumberSecond"
+        />
+
+</RelativeLayout>

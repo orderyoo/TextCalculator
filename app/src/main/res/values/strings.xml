@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TextCalculator</string>
+    <string name="textForNumberOn">Первое число</string>
+    <string name="textForNumberTwo">Второе число</string>
+    <string name="ButtonSum">Сложить</string>
+
+</resources>
