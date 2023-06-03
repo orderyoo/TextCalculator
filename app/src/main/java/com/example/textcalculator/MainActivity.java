@@ -17,12 +17,21 @@ public class MainActivity extends AppCompatActivity {
     public void onClickButtonSum(View view){
         EditText editText = findViewById(R.id.numberFirst);
         EditText editText1 = findViewById(R.id.numberSecond);
-        int num1 = Integer.parseInt(editText.getText().toString());
-        int num2 = Integer.parseInt(editText1.getText().toString());
-        int rez = num1 + num2;
-        String rez1 = num1 + " + " + num2 + " = " + rez;
+        int first = Integer.parseInt(editText.getText().toString());
+        int second = Integer.parseInt(editText1.getText().toString());
+        int result = first + second;
+        String txt;
+        //String rez1 = num1 + " + " + num2 + " = " + rez;
+        if(result < 0 && second < 0){
+            txt = first + " + (" + second + ") = (" + result + ")";
+        }else if(second < 0){
+            txt = first + " + (" + second + ") = " + result;
+        } else if(result < 0){
+            txt = first + " + " + second + " = (" + result + ")";
+        } else {
+            txt = first + " + " + second + " = " + result;}
         Intent intent = new Intent(MainActivity.this, RezultActivity.class);
-        intent.putExtra("rez", rez1);
+        intent.putExtra("rez", txt);
         startActivity(intent);
 
 
